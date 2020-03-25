@@ -1,4 +1,4 @@
-const Controller = require("../core/base_controller");
+const Controller = require('../core/base_controller');
 
 class RegisterController extends Controller {
   /**
@@ -9,9 +9,9 @@ class RegisterController extends Controller {
 
     const isSucceed = await ctx.service.register.register(ctx.request.body);
     if (isSucceed) {
-      this.success("注册成功!");
+      this.success('注册成功!');
     } else {
-      this.fail("账号已存在");
+      this.fail(ctx.ERROR_CODE, '账号已存在');
     }
   }
 }
