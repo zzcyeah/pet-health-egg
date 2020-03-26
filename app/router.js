@@ -17,12 +17,12 @@
  */
 
 module.exports = app => {
-  const { router, controller } = app;
-  const { home } = controller;
+    const { router, controller } = app;
+    const { home } = controller;
 
-  // router.get('/home/:id', home.info);
-  router.post("/api/home", home.info);
-  router.post("/user", controller.user.getUserList);
-  router.post("/login", controller.login.login);
-  router.post("/register", controller.register.register);
+    // router.get('/home/:id', home.info);
+    router.post("/api/home", home.info);
+    router.get("/user", controller.user.getUserList);
+    router.post("/login", controller.login.login);
+    router.post("/register", controller.register.register);
 };

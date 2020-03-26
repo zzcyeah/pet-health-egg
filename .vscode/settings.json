@@ -1,0 +1,37 @@
+{
+    // Tab键缩进
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    // 保存时修复格式
+    "editor.formatOnSave": true,
+    // 触发多光标修改
+    "editor.multiCursorModifier": "ctrlCmd",
+    // 按Tab键触发emmet插件，支持HTML标签的快捷写法
+    "emmet.triggerExpansionOnTab": true,
+    // 去掉多余空格
+    "files.trimTrailingWhitespace": true,
+    // 在文件结尾处插入一行空白行
+    "files.insertFinalNewline": true,
+    // px2rem插件的基准值
+    "px2rem-plus.base": 50,
+    // vetur配置
+    "vetur.format.defaultFormatterOptions": {
+        "prettier": {
+            // Prettier option here
+            "semi": true,
+            "useTabs": false,
+            "singleQuote": true
+        },
+        "js-beautify-html": {
+            "wrap_attributes": "force-aligned"
+        }
+    },
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "vetur.format.defaultFormatter.js": "prettier",
+    "vetur.format.defaultFormatter.css": "prettier",
+    "vetur.format.defaultFormatter.less": "prettier",
+    "vetur.format.options.tabSize": 4,
+    "vetur.format.options.useTabs": false
+}
