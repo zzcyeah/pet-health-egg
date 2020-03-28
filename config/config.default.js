@@ -2,6 +2,16 @@
 
 'use strict';
 
+
+const DEFALUTE_HOST_NAME = '127.0.0.1'
+const DEFALUTE_PORT = 7001;
+
+const MONGODB_HOST_NAME = '193.112.216.95'
+const MONGODB_PORT = 27017;
+
+const REAIS_HOST_NAME = '193.112.216.95'
+const REAIS_PORT = 6379;
+
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
@@ -22,8 +32,8 @@ module.exports = appInfo => {
     config.cluster = {
         listen: {
             path: '',
-            port: 7001,
-            hostname: '127.0.0.1'
+            port: DEFALUTE_PORT,
+            hostname: DEFALUTE_HOST_NAME
         }
     };
     // config.gzip = {
@@ -32,15 +42,15 @@ module.exports = appInfo => {
 
     config.mongoose = {
         client: {
-            url: 'mongodb://127.0.0.1:27017/egg-mongo',
+            url: `mongodb://${MONGODB_HOST_NAME}:${MONGODB_PORT}/egg-mongo`,
             options: {}
         }
     };
 
     config.redis = {
         client: {
-            port: 6379,
-            host: '127.0.0.1',
+            port: REAIS_PORT,
+            host: REAIS_HOST_NAME,
             password: 'auth',
             db: 0
         }
@@ -54,7 +64,7 @@ module.exports = appInfo => {
         domainWhiteList: ['http://127.0.0.1:5500']
     };
 
-    config.baseUrl = 'http://127.0.0.1:7001';
+    config.baseUrl = `http://${DEFALUTE_HOST_NAME}:${DEFALUTE_PORT}`;
 
     config.cors = {
         origin: '*',
